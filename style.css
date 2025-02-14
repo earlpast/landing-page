@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+
+    font: 400 20px / 30px "Roboto", sans-serif;
+
+}
+
+.flexBox {
+    display: flex;
+    border: 1px solid black;
+    padding: 16px;
+    flex-direction: row;
+
+}
+
+/* Header Image and links */
+#s1,
+#s2 {
+    background-color: #1F2937;
+    color: #e5e7eb;
+}
+
+#s1 div {
+    flex: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    padding: 5px;
+    font: 18px;
+}
+
+#s1 div:nth-child(n+2) {
+    flex-grow: 0;
+}
+
+
+/* Section 2 which is intro text/button and image on right side */
+#s2{
+/* height:140px; */
+flex-wrap: nowrap;
+justify-content: center;
+align-items: center;
+align-content: stretch;
+/* gap:10px; */
+
+}
+ #s2 div {
+    flex: 1;
+    align-self: auto;
+    order: 0;
+    padding: 5px;
+    font: 18px;
+    border: #e5e7eb 5px solid;
+}
+
+button {
+    background-color: #3882f6;
+}
+
+
+
+.secondText {
+    font-size: 18px;
+    color: #E5E7EB;
+}
+
+h2 {
+    font-size: 24px;
+    color: #F8FaF8;
+}
