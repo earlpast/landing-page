@@ -6,13 +6,13 @@
 
 body {
 
-    font: 400 20px / 30px "Roboto", sans-serif;
+    font: 400 20px/30px "Roboto", sans-serif;
+
 
 }
 
 .flexBox {
     display: flex;
-    border: 1px solid black;
     padding: 16px;
     flex-direction: row;
 
@@ -20,7 +20,8 @@ body {
 
 /* Header Image and links */
 #s1,
-#s2 {
+#s2,
+#s6 {
     background-color: #1F2937;
     color: #e5e7eb;
 }
@@ -32,45 +33,191 @@ body {
     align-self: auto;
     order: 0;
     padding: 5px;
-    font: 18px;
+    font-size: 24px;
+    color: #F9FaF8;
+    font-weight: 600;
 }
 
 #s1 div:nth-child(n+2) {
     flex-grow: 0;
+    font-weight: 400;
 }
 
 
 /* Section 2 which is intro text/button and image on right side */
-#s2{
-/* height:140px; */
-flex-wrap: nowrap;
-justify-content: center;
-align-items: center;
-align-content: stretch;
-/* gap:10px; */
+#s2 {
+    /* height:140px; */
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    /* gap:10px; */
 
 }
- #s2 div {
+
+#s2 div {
     flex: 1;
     align-self: auto;
     order: 0;
     padding: 5px;
     font: 18px;
-    border: #e5e7eb 5px solid;
+    margin: 50px;
 }
 
 button {
     background-color: #3882f6;
+    border-radius: 10px;
+
 }
 
+#s2 button {
+    margin-top: 30px;
+}
 
+#s2 .heroMain h2 {
+    font-size: 48px;
+    font-weight: 900;
+    color: #f9FAF8;
+    line-height: 1.25em;
+}
 
-.secondText {
+#s2 .heroMain p,
+#s2 button,
+#s1 div:nth-child(n+2) {
     font-size: 18px;
-    color: #E5E7EB;
+    color: #e5e7eb;
 }
 
-h2 {
-    font-size: 24px;
-    color: #F8FaF8;
+/* This is section 3, I am going to do column layout then row layout in the second object */
+#s3 {
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0px;
+}
+
+.infoHeader {
+    font-size: 36px;
+    color: #1F2937;
+    font-weight: 900
+}
+
+#s3Container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: normal;
+    align-content: normal;
+    width: 60%;
+
+}
+
+#s3Container img {
+    border: 2px solid #3882f6;
+    border-radius: 10px;
+}
+
+#s3Container div {
+    margin: 30px;
+    text-align: center;
+}
+
+#s3Container p {
+    font-size: 16px;
+    line-height: 1.15em;
+}
+
+/* This is section just one quote with attribute */
+#s4 {
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 200px;
+    background-color: #e5e7eb;
+    font-size: 36px;
+    font-style: italic;
+    color: #1F2937;
+    line-height: 1.5em;
+
+
+}
+
+#s4 div:nth-child(1) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    font-weight: 400;
+
+}
+
+#s4 div:nth-child(2) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 0;
+    align-self: flex-end;
+    order: 0;
+    font-weight: 600;
+}
+
+/* Section 5. the call to action */
+#s5 {
+    padding: 100px 200px;
+
+}
+
+#s5Container {
+    background-color: #3882f6;
+    border-radius: 10px;
+    color: #e5e7eb;
+
+    padding: 10px 40px;
+
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: normal;
+    align-content: normal;
+}
+
+#s5Container div:nth-child(1) {
+    display: block;
+    flex-grow: 3;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    padding: 25px 10px;
+}
+
+#s5Container div:nth-child(2) {
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    align-self: center;
+
+}
+
+#s5Container h2 {
+    font-weight: 600;
+
+}
+
+#s5 button {
+    border: solid 2px;
+}
+
+/* This is the footer section */
+#s6 {
+    padding: 30px 0px;
+    text-align: center;
 }
